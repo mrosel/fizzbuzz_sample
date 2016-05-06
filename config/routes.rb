@@ -1,5 +1,7 @@
 FizzbuzzSample::Application.routes.draw do
+  namespace :api, defaults: { format: :json } do 
 
+  end
 end
 
 Rails.application.routes.draw do
