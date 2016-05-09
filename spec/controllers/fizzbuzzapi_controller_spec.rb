@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "get/post/delete to favorites api path" do
   describe Api::V1::FizzbuzzapiController, :type => :controller do
-    render_views
+   # render_views
 
     let(:json) { JSON.parse(response.body) }
 

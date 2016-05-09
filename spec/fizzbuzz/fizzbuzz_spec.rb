@@ -1,5 +1,5 @@
 require 'rails_helper'
-feature "Fizzbuzz lib tests" do
+describe "Fizzbuzz lib tests" do
   it "FizzBuzz" do
      n=3; assert fizzbuzz(n) == 'Fizz', "expected Fizz for #{n}"
      n=5; assert fizzbuzz(n) == 'Buzz', "expected Buzz for #{n}"
