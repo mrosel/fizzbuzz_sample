@@ -30,11 +30,10 @@ module Api::V1
     #make a hash where the number is the key and fizzbuzz is the value
       #paginate supports arrays, so use a multi val array
     #fizzbuzz = range.map{|n| fizzbuzz(n)}
-    fizz_hash=[]
-    range.each{|n| fizz_hash << [n,fizzbuzz(n)]}
+    fizz_hash={}
+    range.each{|n| fizz_hash[n] = fizzbuzz(n)}
 
-    @fizzbuzz = fizz_hash.paginate(:page => params[:page], :per_page =>per_page.to_i)
-    render json: @fizzbuzz.to_json
+    render json: fizz_hash.to_json
   end
 
 

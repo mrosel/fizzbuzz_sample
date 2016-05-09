@@ -11,7 +11,7 @@ feature "get/post/delete to favorites api path" do
     end
     context 'all fizzbuzz' do
       it 'returns the fizzbuzz' do
-        expect(json.collect{|l| l[0]}).to include(100)
+        expect(json.collect{|l| l[0]}).to include("100")
       end
     end
   end
