@@ -1,3 +1,8 @@
+bundle install
+rake db:migrate
+rake  # to run specs
+rails s
+
 Task A: Ruby on Rails FizzBuzz application
 ­# Standard FizzBuzz rules, divisible by 3 is Fizz, divisible by 5 is Buzz
 #  -> went ahead and included 'FizzBuzz' for 15
@@ -18,10 +23,12 @@ Task A: Ruby on Rails FizzBuzz application
 #    Stripped it down to eliminate the complexity of log/in log out logic
 #    also felt that since there was no user model to associate with favorites, I went ahead and stripped params checking to keep it simple
 ­ 
-  Should provide a JSON API with all the above mentioned functionality
-    tests?
+#  Should provide a JSON API with all the above mentioned functionality
+    #tests successful
 
 Task B: Client to consume the JSON API
+ #in folder examples
 ­ Create a client to consume the FizzBuzz application API
 ­ Should be available from the command line
 ­ Should be written in a language other than Ruby
+
