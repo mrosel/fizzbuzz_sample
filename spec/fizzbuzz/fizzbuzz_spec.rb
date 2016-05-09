@@ -1,6 +1,4 @@
 require 'rails_helper'
-
-­# Standard FizzBuzz rules, divisible by 3 is Fizz, divisible by 5 is Buzz
 feature "Fizzbuzz lib tests" do
   it "FizzBuzz" do
      n=3; assert fizzbuzz(n) == 'Fizz', "expected Fizz for #{n}"

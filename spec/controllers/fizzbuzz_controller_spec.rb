@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe FavoritesController, type: :controller do
+RSpec.describe FizzbuzzController, type: :controller do
 
-  describe "GET #create" do
+  describe "GET #index" do
     it "returns http success" do
-      get :create
+      get :index
       expect(response).to have_http_status(:success)
     end
   end

@@ -4,9 +4,7 @@
 <% @fizzbuzz.each do |original,fizzbuzz| %>
 	<% @favorites[original.to_i] ? active="active" : active=false %>
 		<tr class="<%=active%>">
-		 	<td>
-				<%= fizzbuzz %> 
-			</td>
+		 	<td><%= fizzbuzz %></td>
 			<td>
 			<!-- <%=@favorites.inspect %> -->
 				<% if !active %>

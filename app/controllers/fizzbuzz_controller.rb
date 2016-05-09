@@ -1,4 +1,5 @@
-class FizzbuzzController < Api::V1::FizzbuzzapiController 
+class FizzbuzzController < ApplicationController
+  include FizzBuzz
 
   DEF_MIN = 1
   DEF_MAX = 100
