@@ -1,8 +1,24 @@
+<div class="row">
 <h1>FizzBuzz Example</h1>
-<%= link_to api_fizzbuzz_index_path %>
-<ul>
-<% @fizzbuzz.each do |fb| %>
-	<li><%= fb %></li>
+<table class="table">
+<% @fizzbuzz.each do |original,fizzbuzz| %>
+	<% @favorites[original.to_i] ? active="active" : active=false %>
+		<tr class="<%=active%>">
+		 	<td>
+				<%= fizzbuzz %> 
+			</td>
+			<td>
+			<!-- <%=@favorites.inspect %> -->
+				<% if !active %>
+					<%= link_to 'Favorite', favorites_path(favorite_id: original.to_i), method: :post %>
+				<%else %>
+					<%= link_to 'Un-favorite', favorite_path(id:original.to_i, favorite_id: original.to_i), :method => :delete %>
+		 		<%end%>
+		 	</td>			
+		</tr>
 <% end %>
-</ul>
-<%= will_paginate @fizzbuzz %>
+</table>
+<div class="center">
+	<%= will_paginate @fizzbuzz %>
+</div>
+</div>
