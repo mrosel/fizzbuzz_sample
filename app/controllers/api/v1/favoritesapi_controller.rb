@@ -1,6 +1,6 @@
 
 module Api::V1
-  class favoritesapiController < ApplicationController
+  class FavoritesapiController < ApplicationController
     before_action :set_favorite, only: :destroy
     
     # POST /favorites.json
