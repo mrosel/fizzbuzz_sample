@@ -25,7 +25,25 @@ while :; do
         exit 1
       fi
       ;;
+#get request, min/max/perpage
+    -m|--min)  
+      if [ -n "$2" ]; then
+        min=$2
+        shift
+      else
+        min=0
+      fi
+      ;;
 
+    -M|--max)  
+      if [ -n "$2" ]; then
+        max=$2
+        shift
+      else
+        max=100
+      fi
+      ;;
+    
     -?*)
       printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
       ;;
@@ -37,4 +55,5 @@ done
 
 
 #?max=100&min=1&per_page=10
-$CURL -i -H "Accept: application/json" -H "Content-Type: application/json" $destination/  
+#./examples/fizzbuzz_api_client.sh -d "localhost:3000/api/v1/fizzbuzzapi"
+$CURL -i -H "Accept: application/json" -H "Content-Type: application/json" $destination/ 
